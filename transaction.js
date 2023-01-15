@@ -8,7 +8,7 @@ const sendBitcoin = async (receiverAddress, amountToSend) => {
   const satoshiToSend = amountToSend * 100000000;
   let fee = 0;
   let inputCount = 0;
-  //Output is 2 - to receiver's address and change address
+  //Output is 2 - to receiver's address and change address 
   let outputCount = 2;
   const utxos = await axios.get(
     `https://sochain.com/api/v2/get_tx_unspent/${sochain_network}/${sourceAddress}`
